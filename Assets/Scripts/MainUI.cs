@@ -6,6 +6,7 @@ using UnityEngine;
 public class MainUI : MonoBehaviour
 {
     public string action;
+    public GameObject mainCamera;
     public GameObject cameraBox;
 
     private void OnMouseDown() {
@@ -19,6 +20,9 @@ public class MainUI : MonoBehaviour
     private void OnMouseUpAsButton() {
         if(action == "camera"){
             cameraBox.GetComponent<Animation>().Play("open_box");
+            mainCamera.GetComponent<PhoneCamera>().startStreaming = true;
+        }else if(action == "gallery"){
+            mainCamera.GetComponent<PhoneCamera>().initCamera();
         }
     }
 }
