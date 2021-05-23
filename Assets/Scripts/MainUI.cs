@@ -19,10 +19,10 @@ public class MainUI : MonoBehaviour
     
     private void OnMouseUpAsButton() {
         if(action == "camera"){
+            mainCamera.GetComponent<PhoneCamera>().initCamera();
             cameraBox.GetComponent<Animation>().Play("open_box");
             mainCamera.GetComponent<PhoneCamera>().startStreaming = true;
         }else if(action == "gallery"){
-            mainCamera.GetComponent<PhoneCamera>().initCamera();
         }
     }
 }
