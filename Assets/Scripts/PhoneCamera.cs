@@ -24,7 +24,7 @@ public class PhoneCamera : MonoBehaviour
 
         for(int i = 0; i < devices.Length; i++){
             if(devices[i].isFrontFacing){
-                backCam = new WebCamTexture(devices[i].name, Screen.height, Screen.width);
+                backCam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
             }
         }
 
@@ -39,19 +39,19 @@ public class PhoneCamera : MonoBehaviour
         camAvailable = true;
     }
 
-    // void Update()
-    // {
-    //     if(!camAvailable && !startStreaming)
-    //         return;
+    void Update()
+    {
+        if(!camAvailable && !startStreaming)
+            return;
 
-    //     float ratio = (float)backCam.height/(float)backCam.width;
-    //     fit.aspectRatio = ratio;
+        float ratio = (float)backCam.width/(float)backCam.height;
+        fit.aspectRatio = ratio;
 
-    //     float scaleY = backCam.videoVerticallyMirrored ?    -1f: 1f;
-    //     background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
+        float scaleY = backCam.videoVerticallyMirrored ?    -1f: 1f;
+        background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
 
-    //     int orient = -backCam.videoRotationAngle;
-    //     background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
-    // }
+        int orient = -backCam.videoRotationAngle;
+        background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
+    }
 
 }

@@ -625,4 +625,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Mian.unity
-  playerPath: C:/Users/MQ/Documents/GitHub/Pictor/build v0.1.apk
+  playerPath: C:/Users/MQ/Documents/GitHub/Pictor/build v0.2.apk
