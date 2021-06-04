@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Mian.unity
+- path: Assets/Scenes/Filter.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

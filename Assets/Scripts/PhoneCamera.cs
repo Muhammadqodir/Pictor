@@ -51,7 +51,7 @@ public class PhoneCamera : MonoBehaviour
         background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
 
         int orient = -backCam.videoRotationAngle;
-        background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
+        background.rectTransform.localEulerAngles = new Vector3(0, orient, 0);
     }
 
 }
