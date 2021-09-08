@@ -9,6 +9,7 @@ public class MainUI : MonoBehaviour
     public GameObject mainCamera;
     public GameObject cameraBox;
     public GameObject white;
+    public GameObject imagePicker;
 
     private void OnMouseDown() {
         GetComponent<Animation>().Play("btn_down");
@@ -25,7 +26,8 @@ public class MainUI : MonoBehaviour
             mainCamera.GetComponent<PhoneCamera>().startStreaming = true;
             white.GetComponent<Animation>().Play("fade_in");
         }else if(action == "gallery"){
-            Application.LoadLevel("Filter");
+            imagePicker.GetComponent<Animation>().Play("show");
         }
     }
+
 }
